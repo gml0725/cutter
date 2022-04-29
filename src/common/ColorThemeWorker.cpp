@@ -17,8 +17,8 @@ const QStringList ColorThemeWorker::cutterSpecificOptions = {
     "gui.dataoffset",     "gui.navbar.code",     "gui.navbar.empty",
     "angui.navbar.str",   "gui.disass_selected", "gui.breakpoint_background",
     "gui.overview.node",  "gui.overview.fill",   "gui.overview.border",
-    "gui.border",         "gui.background",      "gui.alt_background",
-    "gui.disass_selected"
+    "gui.border",         "gui.background",      "gui.background_alt",
+    "gui.node_background","gui.disass_selected"
 };
 
 const QStringList ColorThemeWorker::rizinUnusedOptions = {

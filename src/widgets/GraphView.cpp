@@ -336,6 +336,16 @@ void GraphView::paint(QPainter &p, QPoint offset, QRect viewport, qreal scale, b
     p.setWindow(window);
     QRectF windowF(window.x(), window.y(), window.width(), window.height());
 
+    // Check if we need to redraw the background with a gradient
+    if(backgroundColor != backgroundAltColor) {
+        QLinearGradient backgroundGradient;
+        backgroundGradient.setCoordinateMode(QGradient::StretchToDeviceMode);
+        backgroundGradient.setSpread(QGradient::PadSpread);
+        backgroundGradient.setColorAt(0, backgroundColor);
+        backgroundGradient.setColorAt(1, backgroundAltColor);
+        p.fillRect(windowF,backgroundGradient);
+    }
+
     for (auto &blockIt : blocks) {
         GraphBlock &block = blockIt.second;
 

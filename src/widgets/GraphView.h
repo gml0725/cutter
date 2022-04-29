@@ -113,6 +113,7 @@ protected:
     std::unordered_map<ut64, GraphBlock> blocks;
     /// image background color
     QColor backgroundColor = QColor(Qt::white);
+    QColor backgroundAltColor = QColor(Qt::white);
 
     // Padding inside the block
     int block_padding = 16;

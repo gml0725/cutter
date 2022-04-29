@@ -157,11 +157,12 @@ void CutterGraphView::showExportDialog()
 
 void CutterGraphView::updateColors()
 {
-    disassemblyBackgroundColor = ConfigColor("gui.alt_background");
+    disassemblyBackgroundColor = ConfigColor("gui.node_background");
     disassemblySelectedBackgroundColor = ConfigColor("gui.disass_selected");
     mDisabledBreakpointColor = disassemblyBackgroundColor;
     graphNodeColor = ConfigColor("gui.border");
     backgroundColor = ConfigColor("gui.background");
+    backgroundAltColor = ConfigColor("gui.background_alt");
     disassemblySelectionColor = ConfigColor("lineHighlight");
     PCSelectionColor = ConfigColor("highlightPC");
 
